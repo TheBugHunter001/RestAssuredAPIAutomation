@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+
+    <test verbose="2" preserve-order="true"
+          name="/Users/arnabsaikia/IdeaProjects/RestAssuredAPIAutomation/src/test/java/com/arnabsaikia/Task05082025/RestfulBookerApiWithMain.java">
+        <classes/>
+    </test>
+
+    <test verbose="2" preserve-order="true"
+          name="/Users/arnabsaikia/IdeaProjects/RestAssuredAPIAutomation/src/test/java/com/arnabsaikia/Task05082025/RestfulBookerApiWithTestNG.java">
+        <classes>
+            <class name="com.arnabsaikia.Task05082025.RestfulBookerApiWithTestNG">
+                <methods>
+                    <include name="TC1_CreateBooking"/>
+                    <include name="TC2_GetBookingId"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+</suite>
