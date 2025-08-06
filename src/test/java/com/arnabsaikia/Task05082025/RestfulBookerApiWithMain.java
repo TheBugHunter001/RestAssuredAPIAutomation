@@ -34,7 +34,6 @@ public class RestfulBookerApiWithMain {
                 .when()
                 .body(payload)
                 .post();
-
         response.then().log().all().statusCode(200);
 
         this.bookingId = response.jsonPath().getInt("bookingid"); // <<<< Extract booking id
