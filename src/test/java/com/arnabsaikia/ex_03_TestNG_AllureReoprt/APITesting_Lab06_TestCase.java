@@ -8,9 +8,9 @@ public class APITesting_Lab06_TestCase {
     String pincode;
 
     @Test
-    public void test_tc1_pincode_valid(){
+    public void test_tc1_pincode_valid() {
 
-        pincode="781005";
+        pincode = "781005";
         RestAssured
                 .given()
                 .baseUri("https://api.zippopotam.us")

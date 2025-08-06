@@ -5,7 +5,7 @@ import io.restassured.response.Response;
 
 public class RestfulBookerApiWithMain {
 
-    Integer bookingId ;
+    Integer bookingId;
 
     public static void main(String[] args) {
         RestfulBookerApiWithMain RB = new RestfulBookerApiWithMain();
@@ -15,7 +15,7 @@ public class RestfulBookerApiWithMain {
     // Create booking with POST API
     public RestfulBookerApiWithMain TC1_CreateBooking() {
 
-       String payload = "{\n" +
+        String payload = "{\n" +
                 "    \"firstname\" : \"Jim\",\n" +
                 "    \"lastname\" : \"Brown\",\n" +
                 "    \"totalprice\" : 111,\n" +
@@ -35,7 +35,7 @@ public class RestfulBookerApiWithMain {
                 .body(payload)
                 .post();
 
-                response.then().log().all().statusCode(200);
+        response.then().log().all().statusCode(200);
 
         this.bookingId = response.jsonPath().getInt("bookingid"); // <<<< Extract booking id
 
@@ -43,11 +43,11 @@ public class RestfulBookerApiWithMain {
     }
 
     // Fetch booking with GET API
-    public RestfulBookerApiWithMain TC2_GetBookingId(){
+    public RestfulBookerApiWithMain TC2_GetBookingId() {
 
         RestAssured.given()
                 .baseUri("https://restful-booker.herokuapp.com")
-                .basePath("/booking/"+bookingId)
+                .basePath("/booking/" + bookingId)
                 .when()
                 .get()
                 .then().log().all().statusCode(200);

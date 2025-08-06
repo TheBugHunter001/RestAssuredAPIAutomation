@@ -6,10 +6,10 @@ import org.testng.annotations.Test;
 
 public class RestfulBookerApiWithTestNG {
 
-    Integer bookingId ;
+    Integer bookingId;
 
-// Create booking with POST API
-@Test
+    // Create booking with POST API
+    @Test
     public void TC1_CreateBooking() {
 
         String payload = "{\n" +
@@ -40,11 +40,11 @@ public class RestfulBookerApiWithTestNG {
 
     // Fetch booking with GET API
     @Test
-    public void TC2_GetBookingId(){
+    public void TC2_GetBookingId() {
 
         RestAssured.given()
                 .baseUri("https://restful-booker.herokuapp.com")
-                .basePath("/booking/"+bookingId)
+                .basePath("/booking/" + bookingId)
                 .when()
                 .get()
                 .then().log().all().statusCode(200);
