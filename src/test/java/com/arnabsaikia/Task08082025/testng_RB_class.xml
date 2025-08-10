@@ -1,0 +1,16 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Parallel-Classes" parallel="classes" thread-count="4">
+
+    <test verbose="2" preserve-order="true"
+          name="/Users/arnabsaikia/IdeaProjects/RestAssuredAPIAutomation/src/test/java/com/arnabsaikia/Task08082025/">
+        <classes/>
+    </test>
+    <test name="BookingTests">
+        <classes>
+            <class name="com.arnabsaikia.Task08082025.RestfulBookerApisE2E"/>
+            <class name="com.arnabsaikia.Task08082025.RestfulBookerNegativeTestCases"/>
+            <class name="com.arnabsaikia.Task08082025.RestfulBookerGetApis"/>
+            <class name="com.arnabsaikia.Task08082025.RestfulBookerPostAndPutApis"/>
+        </classes>
+    </test>
+</suite>

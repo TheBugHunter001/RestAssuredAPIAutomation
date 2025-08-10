@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Parallel-Methods" parallel="methods" thread-count="4">
+    <test name="BookingTests">
+        <classes>
+            <class name="com.arnabsaikia.Task08082025.RestfulBookerApisE2E"/>
+            <class name="com.arnabsaikia.Task08082025.RestfulBookerNegativeTestCases"/>
+            <class name="com.arnabsaikia.Task08082025.RestfulBookerGetApis"/>
+            <class name="com.arnabsaikia.Task08082025.RestfulBookerPostAndPutApis"/>
+        </classes>
+    </test>
+</suite>
