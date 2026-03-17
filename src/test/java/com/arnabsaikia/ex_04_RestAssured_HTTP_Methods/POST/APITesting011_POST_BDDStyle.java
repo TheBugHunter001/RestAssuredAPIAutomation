@@ -6,6 +6,7 @@ import org.testng.annotations.Test;
 
 public class APITesting011_POST_BDDStyle {
 
+    @Test
     public void test_POST_Auth() {
 
         // https://restful-booker.herokuapp.com/auth
@@ -14,10 +15,12 @@ public class APITesting011_POST_BDDStyle {
         //    "password" : "password123"
         //}
 
-        String payload = "{\n" +
-                "    \"username\" : \"admin\",\n" +
-                "    \"password\" : \"password123\"\n" +
-                "}";
+        String payload = """
+                {
+                    "username" : "admin",
+                    "password" : "password123"
+                }
+                """;
 
         RestAssured
                 .given()

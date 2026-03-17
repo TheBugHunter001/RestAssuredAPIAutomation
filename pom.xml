@@ -12,6 +12,8 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <!-- Align compiler level with installed JDK to avoid "JavaSE-1.8" build-path warnings -->
+        <maven.compiler.release>21</maven.compiler.release>
     </properties>
 
     <dependencies>

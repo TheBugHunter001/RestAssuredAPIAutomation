@@ -17,17 +17,18 @@ public class APITesting_Lab02_RA {
         // bath Path - /IN/560016
 
 
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter the pincode!");
-        String pincode = sc.next();
+        try (Scanner sc = new Scanner(System.in)) {
+            System.out.println("Enter the pincode!");
+            String pincode = sc.next();
 
-        RestAssured
-                .given().baseUri("https://api.zippopotam.us")
-                .basePath("/IN/" + pincode)
-                .when()
-                .get()
-                .then().log().all()
-                .statusCode(200);
+            RestAssured
+                    .given().baseUri("https://api.zippopotam.us")
+                    .basePath("/IN/" + pincode)
+                    .when()
+                    .get()
+                    .then().log().all()
+                    .statusCode(200);
+        }
 
         // Headers, Cookies, Response Body, ...others.
 
